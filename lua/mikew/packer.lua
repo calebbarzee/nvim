@@ -17,13 +17,8 @@ return require('packer').startup(function(use)
     use { "ellisonleao/gruvbox.nvim", as = "gruvbox" }
     use { "savq/melange-nvim", as = "melange" }
     use { "olivercederborg/poimandres.nvim", as = "poimandres" }
-    use({
-        'rmehri01/onenord.nvim',
-        as = 'onenord',
-        content = function()
-            vim.cmd('colorscheme onenord')
-        end
-    })
+    use { 'rmehri01/onenord.nvim', as = 'onenord', }
+    use { 'AlexvZyl/nordic.nvim', as = 'nordic', }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
