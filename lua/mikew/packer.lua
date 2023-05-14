@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
     use { "olivercederborg/poimandres.nvim", as = "poimandres" }
     use { 'rmehri01/onenord.nvim', as = 'onenord', }
     use { 'AlexvZyl/nordic.nvim', as = 'nordic', }
+    use { 'sainnhe/everforest', as = 'everforest', }
+    use { 'rebelot/kanagawa.nvim', as = 'kanagawa', }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
