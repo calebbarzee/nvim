@@ -1,38 +1,35 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
-    use {
+require("lazy").setup({
+    {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
+        dependencies = { { 'nvim-lua/plenary.nvim' } }
+    },
 
     -- colors
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use { "ellisonleao/gruvbox.nvim", as = "gruvbox" }
-    use { "savq/melange-nvim", as = "melange" }
-    use { "olivercederborg/poimandres.nvim", as = "poimandres" }
-    use { 'rmehri01/onenord.nvim', as = 'onenord', }
-    use { 'AlexvZyl/nordic.nvim', as = 'nordic', }
-    use { 'sainnhe/everforest', as = 'everforest', }
-    use { 'rebelot/kanagawa.nvim', as = 'kanagawa', }
-    use { 'folke/tokyonight.nvim', as = 'tokyonight', }
+    { "catppuccin/nvim", name = "catppuccin" },
+    { "ellisonleao/gruvbox.nvim", name = "gruvbox" },
+    { "savq/melange-nvim", name = "melange" },
+    { "olivercederborg/poimandres.nvim", name = "poimandres" },
+    { 'rmehri01/onenord.nvim', name = 'onenord', },
+    { 'AlexvZyl/nordic.nvim', name = 'nordic', },
+    { 'sainnhe/everforest', name = 'everforest', },
+    { 'rebelot/kanagawa.nvim', name = 'kanagawa', },
+    { 'folke/tokyonight.nvim', name = 'tokyonight', },
 
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('nvim-treesitter/playground')
-    use('ThePrimeagen/harpoon')
-    use('mbbill/undotree')
-    use('tpope/vim-fugitive')
+    {{'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'}},
+    'nvim-treesitter/playground',
+    'ThePrimeagen/harpoon',
+    'mbbill/undotree',
+    'tpope/vim-fugitive',
 
-    use {
+    {
         "VonHeikemen/lsp-zero.nvim",
         branch = "v2.x",
-        requires = {
+        dependencies = {
             -- LSP Support
             { "neovim/nvim-lspconfig" },
             { "williamboman/mason.nvim" },
@@ -50,27 +47,99 @@ return require('packer').startup(function(use)
             { "L3MON4D3/LuaSnip" },
             { "rafamadriz/friendly-snippets" },
         },
-    }
+    },
 
-    use {
+    {
         'lewis6991/gitsigns.nvim',
         config = function()
-            require('gitsigns').setup()
+            require('gitsigns').init()
         end
-    }
-    use 'feline-nvim/feline.nvim'
+    },
+    'feline-nvim/feline.nvim',
 
     -- ************ NeoTree Stuff *****************************
     -- Unless you are still migrating, remove the deprecated commands from v1.x
     vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
-    use {
+    {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v2.x",
-        requires = {
+        dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
             "MunifTanjim/nui.nvim",
         }
-    }
-end)
+    },
+})
+
+-- return require('packer').startup(function(use)
+--     -- Packer can manage itself
+--     use 'wbthomason/packer.nvim'
+--     use {
+--         'nvim-telescope/telescope.nvim', tag = '0.1.1',
+--         -- or                            , branch = '0.1.x',
+--         requires = { { 'nvim-lua/plenary.nvim' } }
+--     }
+-- 
+--     -- colors
+--     use { "catppuccin/nvim", as = "catppuccin" }
+--     use { "ellisonleao/gruvbox.nvim", as = "gruvbox" }
+--     use { "savq/melange-nvim", as = "melange" }
+--     use { "olivercederborg/poimandres.nvim", as = "poimandres" }
+--     use { 'rmehri01/onenord.nvim', as = 'onenord', }
+--     use { 'AlexvZyl/nordic.nvim', as = 'nordic', }
+--     use { 'sainnhe/everforest', as = 'everforest', }
+--     use { 'rebelot/kanagawa.nvim', as = 'kanagawa', }
+--     use { 'folke/tokyonight.nvim', as = 'tokyonight', }
+-- 
+--     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+--     use('nvim-treesitter/playground')
+--     use('ThePrimeagen/harpoon')
+--     use('mbbill/undotree')
+--     use('tpope/vim-fugitive')
+-- 
+--     use {
+--         "VonHeikemen/lsp-zero.nvim",
+--         branch = "v2.x",
+--         requires = {
+--             -- LSP Support
+--             { "neovim/nvim-lspconfig" },
+--             { "williamboman/mason.nvim" },
+--             { "williamboman/mason-lspconfig.nvim" },
+-- 
+--             -- Autocompletion
+--             { "hrsh7th/nvim-cmp" },
+--             { "hrsh7th/cmp-buffer" },
+--             { "hrsh7th/cmp-path" },
+--             { "saadparwaiz1/cmp_luasnip" },
+--             { "hrsh7th/cmp-nvim-lsp" },
+--             { "hrsh7th/cmp-nvim-lua" },
+-- 
+--             -- Snippets
+--             { "L3MON4D3/LuaSnip" },
+--             { "rafamadriz/friendly-snippets" },
+--         },
+--     }
+-- 
+--     use {
+--         'lewis6991/gitsigns.nvim',
+--         config = function()
+--             require('gitsigns').setup()
+--         end
+--     }
+--     use 'feline-nvim/feline.nvim'
+-- 
+--     -- ************ NeoTree Stuff *****************************
+--     -- Unless you are still migrating, remove the deprecated commands from v1.x
+--     vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+-- 
+--     use {
+--         "nvim-neo-tree/neo-tree.nvim",
+--         branch = "v2.x",
+--         requires = {
+--             "nvim-lua/plenary.nvim",
+--             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+--             "MunifTanjim/nui.nvim",
+--         }
+--     }
+-- end)
