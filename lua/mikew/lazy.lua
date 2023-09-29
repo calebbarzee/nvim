@@ -38,7 +38,7 @@ require("lazy").setup({
     'nvim-treesitter/playground',
     'ThePrimeagen/harpoon',
     'mbbill/undotree',
-    { 'tpope/vim-fugitive', lazy = true },
+    { 'tpope/vim-fugitive'},
 
     {
         "VonHeikemen/lsp-zero.nvim",
@@ -76,7 +76,6 @@ require("lazy").setup({
 
     {
         "nvim-neo-tree/neo-tree.nvim",
-        lazy = true,
         branch = "v2.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
