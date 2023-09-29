@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- comments
-    { 'numToStr/Comment.nvim',                                   lazy = false, },
+    { 'numToStr/Comment.nvim',                                   lazy = true, },
 
     {
         'nvim-telescope/telescope.nvim',
@@ -24,20 +24,21 @@ require("lazy").setup({
     },
 
     -- colors
-    { "catppuccin/nvim",                                         name = "catppuccin" },
-    { "ellisonleao/gruvbox.nvim",                                name = "gruvbox" },
-    { "savq/melange-nvim",                                       name = "melange" },
-    { "olivercederborg/poimandres.nvim",                         name = "poimandres" },
-    { 'rmehri01/onenord.nvim',                                   name = 'onenord', },
-    { 'AlexvZyl/nordic.nvim',                                    name = 'nordic', },
-    { 'sainnhe/everforest',                                      name = 'everforest', },
-    { 'rebelot/kanagawa.nvim',                                   name = 'kanagawa', },
-    { 'folke/tokyonight.nvim',                                   name = 'tokyonight', },
+    { "catppuccin/nvim", lazy = true, name = "catppuccin" },
+    { "ellisonleao/gruvbox.nvim", lazy = true, name = "gruvbox" },
+    { "savq/melange-nvim", lazy = true, name = "melange" },
+    { "olivercederborg/poimandres.nvim", lazy = true, name = "poimandres" },
+    { 'rmehri01/onenord.nvim',lazy = true, name = 'onenord', },
+    { 'AlexvZyl/nordic.nvim',lazy = true, name = 'nordic', },
+    { 'sainnhe/everforest', lazy = true, name = 'everforest', },
+    { 'rebelot/kanagawa.nvim', lazy = true, name = 'kanagawa', },
+    { 'folke/tokyonight.nvim', lazy = true, name = 'tokyonight', },
+
     { { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' } },
     'nvim-treesitter/playground',
     'ThePrimeagen/harpoon',
     'mbbill/undotree',
-    'tpope/vim-fugitive',
+    { 'tpope/vim-fugitive', lazy = true },
 
     {
         "VonHeikemen/lsp-zero.nvim",
@@ -75,6 +76,7 @@ require("lazy").setup({
 
     {
         "nvim-neo-tree/neo-tree.nvim",
+        lazy = true,
         branch = "v2.x",
         dependencies = {
             "nvim-lua/plenary.nvim",

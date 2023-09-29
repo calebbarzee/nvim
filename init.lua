@@ -1,5 +1,4 @@
 require("mikew.lazy")
-
 require("mikew");
 
 -- comments
