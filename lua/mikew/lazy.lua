@@ -13,6 +13,15 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
+    -- spashscreen
+    {
+        'goolord/alpha-nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.startify'.config)
+        end
+    },
+
     -- comments
     { 'numToStr/Comment.nvim',                                   lazy = true, },
 
@@ -24,21 +33,20 @@ require("lazy").setup({
     },
 
     -- colors
-    { "catppuccin/nvim", lazy = true, name = "catppuccin" },
-    { "ellisonleao/gruvbox.nvim", lazy = true, name = "gruvbox" },
-    { "savq/melange-nvim", lazy = true, name = "melange" },
-    { "olivercederborg/poimandres.nvim", lazy = true, name = "poimandres" },
-    { 'rmehri01/onenord.nvim',lazy = true, name = 'onenord', },
-    { 'AlexvZyl/nordic.nvim',lazy = true, name = 'nordic', },
-    { 'sainnhe/everforest', lazy = true, name = 'everforest', },
-    { 'rebelot/kanagawa.nvim', lazy = true, name = 'kanagawa', },
-    { 'folke/tokyonight.nvim', lazy = true, name = 'tokyonight', },
-
+    { "catppuccin/nvim",                                         lazy = true, name = "catppuccin" },
+    { "ellisonleao/gruvbox.nvim",                                lazy = true, name = "gruvbox" },
+    { "savq/melange-nvim",                                       lazy = true, name = "melange" },
+    { "olivercederborg/poimandres.nvim",                         lazy = true, name = "poimandres" },
+    { 'rmehri01/onenord.nvim',                                   lazy = true, name = 'onenord', },
+    { 'AlexvZyl/nordic.nvim',                                    lazy = true, name = 'nordic', },
+    { 'sainnhe/everforest',                                      lazy = true, name = 'everforest', },
+    { 'rebelot/kanagawa.nvim',                                   lazy = true, name = 'kanagawa', },
+    { 'folke/tokyonight.nvim',                                   lazy = true, name = 'tokyonight', },
     { { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' } },
     'nvim-treesitter/playground',
     'ThePrimeagen/harpoon',
     'mbbill/undotree',
-    { 'tpope/vim-fugitive'},
+    { 'tpope/vim-fugitive' },
 
     {
         "VonHeikemen/lsp-zero.nvim",
