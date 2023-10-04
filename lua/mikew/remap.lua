@@ -94,8 +94,7 @@ function NormalArrowKeys()
     vim.keymap.set("n", "<Right>", "<Right>")
 end
 
--- resize windows (note: right/up is bigger,
--- left/down is smaller)
+-- resize windows (note: right/up is bigger, left/down is smaller)
 function ResizeArrowKeys()
     vim.print("Arrrow keys in resize mode.")
     vim.keymap.set("n", "<Up>", "<C-w>+")
