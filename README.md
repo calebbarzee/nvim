@@ -36,7 +36,23 @@ display properly. You can use nerd fonts here: [Nerd Fonts](https://www.nerdfont
 
 The next time you open nvim, lazy should install all the plugins for you.
 
-# Main Plugins I Used
+# Common Commands I Use
+
+Below are some of the commands I use frequently.
+To search through commands with telescope type:
+```
+:Telescope commands
+```
+## Searching Files
+| command | action |
+|---------|--------|
+| <Space>pv | open netrw file explorer |
+| <Space>pf | search for file |
+| C-p | search for git files |
+| <Space>fg | grep for word or phrase in project files |
+
+
+# Main Plugins I Use
 
 Here are the links to the main plugins for docs/usage. Some have dependencies,
 so there are more than this, but this should get you started.
