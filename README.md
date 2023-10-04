@@ -92,6 +92,40 @@ To search through commands with telescope type:
 | ]d | next diagnostic |
 | Space-u | open undotree |
 
+# LSP Setup
+
+I set this up so it doesn't suggest lsp's for new language buffers. I didn't want
+it bugging me if I enter a file type I don't want to edit ever again. If you want
+to install a new server type:
+```
+:LspInstall
+```
+It will pull up a list of lsp's available for that language, and you can type the number
+for the one you want to install.
+
+To check if an lsp is running in your current buffer type:
+```
+:LspInfo
+```
+Alternately you can type:
+```
+:Mason
+```
+This will pull up a pop up window that shows all available and installed lsp's,
+as well as linters, formatters, and dap's.
+
+If your having problems with an lsp. You can run:
+```
+:LspLog
+```
+This will give you a list of lsp errors with date and time stamps. 
+
+You can also run:
+```
+:checkhealth
+```
+This will show the health status of all installed plugins that have diagnostic
+information.
 
 # Main Plugins I Use
 
