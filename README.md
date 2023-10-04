@@ -1,9 +1,7 @@
 # NeoVim
 My config files for neovim. I started with the primeagen's config and slowly added
-key-maps/plugins.
-
-They're pretty messy, and I still have some redundant files from when I switched
-to lazy.nvim from packer.
+key-maps/plugins. They're pretty messy, and I still have some redundant files from 
+when I switched to lazy.nvim from packer.
 
 Feel free to clone or copy whatever you like.
 
@@ -38,7 +36,10 @@ The next time you open nvim, lazy should install all the plugins for you.
 
 # Common Commands I Use
 
-Below are some of the commands I use frequently.
+Below are some of the commands I use frequently. There are obviously also all of
+the standard vim commands (e.g. yap), and also there are some plugin specific commands
+that I haven't listed. You can read the docs for those in the plugin links below.
+
 To search through commands with telescope type:
 ```
 :Telescope commands
