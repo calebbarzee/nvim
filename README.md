@@ -77,6 +77,10 @@ To search through commands with telescope type:
 | Space-vrr | list all variable references |
 | Space-f | auto format buffer |
 | Space-y/d/Y/d | yank or delete to clipboard (yanked items can be pasted with C-v even outside nvim) |
+| gcc | comment out current line |
+| gbc | insert block comment |
+| gc | (in visual mode) comment out selected lines |
+| gb | (in visual mode) place block comment around selected lines |
 
 ## Misc Commands
 | command | action |
