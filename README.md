@@ -80,7 +80,7 @@ To search through commands with telescope type:
 ## Misc Commands
 | command | action |
 |---------|--------|
-| jj (in insert) | return to normal mode |
+| jj | (in insert mode) return to normal mode |
 | Space-w | quicker save (e.g. you can type Space-w-q-Enter to save and quit)
 | Space-sp | turn on spell check |
 | [d | previous diagnostic |
