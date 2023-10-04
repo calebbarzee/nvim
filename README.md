@@ -46,10 +46,36 @@ To search through commands with telescope type:
 ## Searching Files
 | command | action |
 |---------|--------|
-| <Space>pv | open netrw file explorer |
-| <Space>pf | search for file |
+| Space-pv | open netrw file explorer |
+| Space-pf | search for file |
 | C-p | search for git files |
-| <Space>fg | grep for word or phrase in project files |
+| Space-fg | grep for word or phrase in project files |
+
+## Window Management
+| command | action |
+|---------|--------|
+| Space-ws | open horizantal split |
+| Space-wv | open vertical split |
+| Space-wo | close all other windows |
+| Space-wc | close all this windows |
+| Space-ww | switch to next window |
+| Space-wh/j/k/l | use space-w then h/j/k/l to move around windows |
+| Space-wH/J/K/L | use space-w then H/J/K/L to change window positions |
+| Space-Space-w | Toggle window mode (when in window mode the arrow keys will change the size of windows) |
+
+## Editing Commands
+| command | action |
+|---------|--------|
+| gd | Go to definition (while in normal mode) |
+| C-k | pull up entry for function or object in floating window |
+| C-h | (in insert mode) while typing in paramaters to a function, this will pull up the definition for the function with paramaters |
+| Space-s | Edit every instance of current word in the document |
+| Space-vrn | rename variable |
+| Space-vca | list code actions |
+| Space-vrr | list all variable references |
+| Space-f | auto format buffer |
+| Space-y/d/Y/d | yank or delete to clipboard (yanked items can be pasted with C-v even outside nvim) |
+
 
 
 # Main Plugins I Use
