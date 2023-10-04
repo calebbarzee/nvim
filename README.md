@@ -1,4 +1,4 @@
-# NeoVim
+# My NeoVim Config
 My config files for neovim. I started with the primeagen's config and slowly added
 key-maps/plugins. They're pretty messy, and I still have some redundant files from 
 when I switched to lazy.nvim from packer.
@@ -6,7 +6,6 @@ when I switched to lazy.nvim from packer.
 Feel free to clone or copy whatever you like.
 
 # Getting the config
-
 You need [NeoVim](https://github.com/neovim/neovim) 0.9.0 or later installed for all of the plugins to work properly.
 
 Make sure you don't already have an nvim config folder. If you do, copy your existing one
