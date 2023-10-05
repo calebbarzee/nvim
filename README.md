@@ -6,7 +6,9 @@ when I switched to lazy.nvim from packer.
 Feel free to clone or copy whatever you like.
 
 # Getting the config
-You need [NeoVim](https://github.com/neovim/neovim) 0.9.0 or later installed for all of the plugins to work properly.
+You need [NeoVim](https://github.com/neovim/neovim) 0.9.1 or later installed for 
+all of the plugins to work properly. I've run it on older versions than that, but
+you might see a few errors especially with Treesitter.
 
 Make sure you don't already have an nvim config folder. If you do, copy your existing one
 somewhere else.
