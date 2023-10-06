@@ -69,6 +69,10 @@ end)
 vim.keymap.set("n", "<leader>s",
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- remaps for opening a terminal in vim
+vim.keymap.set("n", "<C-z>", "<C-w>s<C-w>j:terminal<CR><C-w>5-jjA")
+vim.keymap.set("t", "<C-z>", "<C-\\><C-n><C-w>c")
+vim.keymap.set("t", "jj", "<C-\\><C-n>")
 
 -- toggle <space><space>w remap arrow keys to resize windows
 vim.keymap.set("n", "<leader><leader>w", ":lua ToggleResizeMode()<CR>")

@@ -33,6 +33,5 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.cmd("set nofoldenable")
 
--- obviously don't do this on linux/mac if you plan to use the terminal in neovim
-vim.opt.shell = "C:\\WINDOWS\\System32\\cmd.exe"
+vim.opt.shell = "fish"
 
