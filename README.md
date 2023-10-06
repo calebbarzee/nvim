@@ -83,6 +83,22 @@ To search through commands with telescope type:
 | gc | (in visual mode) comment out selected lines |
 | gb | (in visual mode) place block comment around selected lines |
 
+## Git
+All of these commands are using fugitive to do something (i.e. I just remapped some
+fugitive commands). There are a lot more fugitive commands for committing, staging,
+pulling up diffs, staging/splitting hunks. You can look those up in the fugitive link
+in the plugin section below. Or once you are in the git status split (Space-gs), you
+can type 'g?' to see a help menu with a bunch of commands.
+
+| command | action |
+|---------|--------|
+| Space-gs | open git status with fugitive |
+| Space-gds | open diff split (useful when resolving a merge conflict) |
+| Space-g | when a merge diff is open, pull the left side buffer into the merge conflict buffer (center buffer) |
+| Space-h | when a merge diff is open, pull the right side buffer into the merge conflict buffer (center buffer) |
+| [c | previous merge conflict |
+| ]c | next merge conflict |
+
 ## Misc Commands
 | command | action |
 |---------|--------|
