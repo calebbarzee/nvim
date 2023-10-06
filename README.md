@@ -5,6 +5,8 @@ when I switched to lazy.nvim from packer.
 
 Feel free to clone or copy whatever you like.
 
+![Alt text](/screenshots/main_view.png?raw=true "Main Editor View")
+
 # Getting the config
 You need [NeoVim](https://github.com/neovim/neovim) 0.9.1 or later installed for 
 all of the plugins to work properly. I've run it on older versions than that, but
