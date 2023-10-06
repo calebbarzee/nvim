@@ -30,7 +30,7 @@ display properly. You can use nerd fonts here: [Nerd Fonts](https://www.nerdfont
     cd %HOME%\AppData\Local
     git clone https://github.com/MikeWelsh801/nvim.git
 
-## Windows (Msys2)
+## Windows (Msys2 or Git Bash)
 
     cd ~/AppData/Local
     git clone https://github.com/MikeWelsh801/nvim.git
@@ -92,6 +92,8 @@ pulling up diffs, staging/splitting hunks. You can look those up in the fugitive
 in the plugin section below. Or once you are in the git status split (Space-gs), you
 can type 'g?' to see a help menu with a bunch of commands.
 
+![Alt text](/screenshots/merging.png?raw=true "Main Editor View")
+
 | command | action |
 |---------|--------|
 | Space-gs | open git status with fugitive |
@@ -133,7 +135,7 @@ Alternately you can type:
 This will pull up a pop up window that shows all available and installed lsp's,
 as well as linters, formatters, and dap's.
 
-If your having problems with an lsp. You can run:
+If you're having problems with an lsp. You can run:
 ```
 :LspLog
 ```
