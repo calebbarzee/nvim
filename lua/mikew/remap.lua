@@ -91,7 +91,7 @@ end
 
 -- works as expected, moves cursor
 function NormalArrowKeys()
-    vim.print("Arrrow keys in normal mode.")
+    print("Arrrow keys in normal mode.")
     vim.keymap.set("n", "<Up>", "<Up>")
     vim.keymap.set("n", "<Down>", "<Down>")
     vim.keymap.set("n", "<Left>", "<Left>")
@@ -100,7 +100,7 @@ end
 
 -- resize windows (note: right/up is bigger, left/down is smaller)
 function ResizeArrowKeys()
-    vim.print("Arrrow keys in resize mode.")
+    print("Arrrow keys in resize mode.")
     vim.keymap.set("n", "<Up>", "<C-w>+")
     vim.keymap.set("n", "<Down>", "<C-w>-")
     vim.keymap.set("n", "<Left>", "<C-w><")
