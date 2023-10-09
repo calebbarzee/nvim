@@ -1,1 +1,11 @@
+require("plugin.colors")
+require("plugin.fugitive")
+require("plugin.harpoon")
+require("plugin.lsp")
 require("plugin.snip")
+require("plugin.statusbar")
+require("plugin.telescope")
+require("plugin.treesitter")
+require("plugin.undotree")
+
+require("Comment").setup()

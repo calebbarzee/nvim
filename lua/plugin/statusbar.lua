@@ -1,7 +1,8 @@
+-- statusbar
 local gruvbox = {
     fg = '#928374',
     bg = '#1F2223',
-    black ='#1B1B1B',
+    black = '#1B1B1B',
     skyblue = '#458588',
     cyan = '#83a597',
     green = '#689d6a',
@@ -19,3 +20,4 @@ require('gitsigns').setup()
 require('feline').setup({
     theme = gruvbox,
 })
+
