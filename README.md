@@ -27,7 +27,7 @@ display properly. You can use nerd fonts here: [Nerd Fonts](https://www.nerdfont
 
 ## Windows
 
-    cd %HOME%\AppData\Local
+    cd $env:USERPROFILE\AppData\Local
     git clone https://github.com/MikeWelsh801/nvim.git
 
 ## Windows (Msys2 or Git Bash)
