@@ -1,5 +1,5 @@
-require("mikew.lazy")
 require("mikew");
+require("plugin")
 
 -- comments
 require("Comment").setup()
