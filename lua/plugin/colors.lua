@@ -13,6 +13,11 @@ function ColorMyPencils(color)
     vim.cmd("highlight GitSignsAdd guibg=None")
     vim.cmd("highlight GitSignsChange guibg=None")
     vim.cmd("highlight GitSignsDelete guibg=None")
+
+    -- diagnostic signs
+    vim.cmd("highlight DiagnosticSignError guibg=None")
+    vim.cmd("highlight DiagnosticSignWarn guibg=None")
+    vim.cmd("highlight DiagnosticSignHint guibg=None")
 end
 
 ColorMyPencils()
