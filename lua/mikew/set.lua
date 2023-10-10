@@ -1,6 +1,8 @@
 -- relative line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
+-- I'm not sold on this, but I'll try it out.
+vim.opt.cursorline = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -35,3 +37,4 @@ vim.cmd("set nofoldenable")
 
 vim.opt.shell = "fish"
 
+vim.opt.laststatus = 3
