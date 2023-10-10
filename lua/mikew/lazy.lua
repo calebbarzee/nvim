@@ -23,7 +23,7 @@ require("lazy").setup({
     },
 
     -- comments
-    { 'numToStr/Comment.nvim',                                   lazy = true, },
+    { 'numToStr/Comment.nvim',           lazy = true, },
 
     {
         'nvim-telescope/telescope.nvim',
@@ -33,15 +33,23 @@ require("lazy").setup({
     },
 
     -- colors
-    { "catppuccin/nvim",                                         lazy = true, name = "catppuccin" },
-    { "ellisonleao/gruvbox.nvim",                                lazy = true, name = "gruvbox" },
-    { "savq/melange-nvim",                                       lazy = true, name = "melange" },
-    { "olivercederborg/poimandres.nvim",                         lazy = true, name = "poimandres" },
-    { 'rmehri01/onenord.nvim',                                   lazy = true, name = 'onenord', },
-    { 'AlexvZyl/nordic.nvim',                                    lazy = true, name = 'nordic', },
-    { 'sainnhe/everforest',                                      lazy = true, name = 'everforest', },
-    { 'rebelot/kanagawa.nvim',                                   lazy = true, name = 'kanagawa', },
-    { 'folke/tokyonight.nvim',                                   lazy = true, name = 'tokyonight', },
+    { "catppuccin/nvim",                 lazy = true, name = "catppuccin" },
+    { "ellisonleao/gruvbox.nvim",        lazy = true, name = "gruvbox" },
+    { "savq/melange-nvim",               lazy = true, name = "melange" },
+    { "olivercederborg/poimandres.nvim", lazy = true, name = "poimandres" },
+    { 'rmehri01/onenord.nvim',           lazy = true, name = 'onenord', },
+    { 'AlexvZyl/nordic.nvim',            lazy = true, name = 'nordic', },
+    { 'sainnhe/everforest',              lazy = true, name = 'everforest', },
+    { 'rebelot/kanagawa.nvim',           lazy = true, name = 'kanagawa', },
+    { 'folke/tokyonight.nvim',           lazy = true, name = 'tokyonight', },
+    {
+        "xero/miasma.nvim",
+        lazy = true,
+        name = 'miasma',
+    },
+
+
+    -- treesitter
     { { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' } },
     'nvim-treesitter/playground',
     'ThePrimeagen/harpoon',
