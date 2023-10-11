@@ -35,6 +35,7 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.cmd("set nofoldenable")
 
+-- ***CHANGE TERMINAL THAT OPENS WITH <C-z>***
 vim.opt.shell = "fish"
 
 vim.opt.laststatus = 3
