@@ -85,7 +85,8 @@ require("lazy").setup({
             require('gitsigns').setup()
         end
     },
-    'feline-nvim/feline.nvim',
+    -- 'feline-nvim/feline.nvim',
+    'tjdevries/express_line.nvim',
 
     -- ************ NeoTree Stuff *****************************
     -- Unless you are still migrating, remove the deprecated commands from v1.x
