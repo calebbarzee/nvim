@@ -88,7 +88,7 @@ local generator = function()
             function(window, buffer)
                 local branch = extensions.git_branch(window, buffer)
                 if branch then
-                    return branch
+                    return " " .. branch
                 end
             end
         ))
