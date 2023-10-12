@@ -15,7 +15,6 @@
 --     yellow = '#d79921',
 -- }
 
-
 vim.cmd("highlight StatusLine guibg=#1F2223")
 vim.cmd("highlight StatusLine guifg=#6f6666")
 vim.cmd("highlight ElInsert guifg=#af6666")
@@ -29,9 +28,12 @@ local diagnostics = require('el.diagnostic')
 local generator = function()
     local el_segments = {}
 
+    -- vim mode
     table.insert(el_segments, extensions.mode)
+    -- line/col number
     table.insert(el_segments, " [%3l,%3c] ")
 
+    -- formatting for diagnostics
     local formatter = function(_, _, counts)
         local diag = ""
 
@@ -53,10 +55,17 @@ local generator = function()
         return diag
     end
 
-    table.insert(el_segments, diagnostics.make_buffer(formatter))
+    -- diagnostics
+    table.insert(el_segments,
+        subscribe.buf_autocmd(
+            "el_diagnostic",
+            "BufWritePost",
+            diagnostics.make_buffer(formatter)))
 
+    -- move to middle
     table.insert(el_segments, "%=")
 
+    -- icon
     table.insert(el_segments,
         subscribe.buf_autocmd(
             "el_file_icon",
@@ -65,9 +74,13 @@ local generator = function()
                 return extensions.file_icon(_, buffer)
             end
         ))
+
+    -- file name and modified flag
     table.insert(el_segments, " %t %m ")
+    -- move to end
     table.insert(el_segments, "%=")
 
+    -- git branch
     table.insert(el_segments,
         subscribe.buf_autocmd(
             "el_git_branch",
@@ -80,6 +93,7 @@ local generator = function()
             end
         ))
 
+    -- git changes
     table.insert(el_segments, " ")
     table.insert(el_segments,
         subscribe.buf_autocmd(
@@ -93,8 +107,9 @@ local generator = function()
             end
         ))
     local builtin = require('el.builtin')
-    table.insert(el_segments, builtin.readonly_flag)
 
+    -- readonly_flag and percentage_through_file
+    table.insert(el_segments, builtin.readonly_flag)
     table.insert(el_segments, builtin.percentage_through_file)
     table.insert(el_segments, "%%")
 
