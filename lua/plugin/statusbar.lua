@@ -39,17 +39,22 @@ local generator = function()
 
         local errors = counts["errors"]
         if errors ~= 0 then
-            diag = diag .. " " .. errors
+            diag = diag .. "  " .. errors
         end
 
         local warnings = counts["warnings"]
         if warnings ~= 0 then
-            diag = diag .. ' ' .. warnings
+            diag = diag .. '  ' .. warnings
         end
 
         local hints = counts["hints"]
         if hints ~= 0 then
-            diag = diag .. ' ' .. hints
+            diag = diag .. '  ' .. hints
+        end
+
+        local infos = counts["infos"]
+        if infos ~= 0 then
+            diag = diag .. ' » ' .. infos
         end
 
         return diag
