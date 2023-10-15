@@ -26,8 +26,8 @@ require("kanagawa").setup({
             TelescopePromptBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_p1 },
             TelescopeResultsNormal = { fg = theme.ui.fg_dim },
             TelescopeResultsBorder = { fg = theme.ui.bg_m3 },
-            TelescopePreviewNormal = { bg = theme.ui.bg_dim },
-            TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+            TelescopePreviewNormal = { bg = "none" },
+            TelescopePreviewBorder = { bg = "none", fg = theme.ui.bg_m3 },
         }
     end,
 })
