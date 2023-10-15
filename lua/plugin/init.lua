@@ -1,3 +1,4 @@
+require("plugin.alpha")
 require("plugin.colors")
 require("plugin.fugitive")
 require("plugin.harpoon")
