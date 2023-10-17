@@ -72,7 +72,7 @@ require("lazy").setup({
             { "hrsh7th/cmp-nvim-lua", lazy = true },
 
             -- Snippets
-            { "L3MON4D3/LuaSnip", lazy = true },
+            { "L3MON4D3/LuaSnip", event = "CursorMoved" },
             { "rafamadriz/friendly-snippets", lazy = true },
         },
     },
