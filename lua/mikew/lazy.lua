@@ -16,17 +16,18 @@ require("lazy").setup({
     -- spashscreen
     {
         'goolord/alpha-nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
         -- config = function()
         --     require 'alpha'.setup(require 'alpha.themes.startify'.config)
         -- end
     },
 
     -- comments
-    { 'numToStr/Comment.nvim',           lazy = true, },
+    { 'numToStr/Comment.nvim',           event = "VeryLazy", },
 
     {
         'nvim-telescope/telescope.nvim',
+        event = "VeryLazy",
         tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         dependencies = { { 'nvim-lua/plenary.nvim' } }
@@ -42,22 +43,19 @@ require("lazy").setup({
     { 'sainnhe/everforest',              lazy = true, name = 'everforest', },
     { 'rebelot/kanagawa.nvim',           lazy = true, name = 'kanagawa', },
     { 'folke/tokyonight.nvim',           lazy = true, name = 'tokyonight', },
-    {
-        "xero/miasma.nvim",
-        lazy = true,
-        name = 'miasma',
-    },
+    { "xero/miasma.nvim",                lazy = true, name = 'miasma', },
 
 
     -- treesitter
-    { { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' } },
-    'nvim-treesitter/playground',
+    {'nvim-treesitter/nvim-treesitter', event = "BufEnter", build = ':TSUpdate', },
+    { 'nvim-treesitter/playground', event = "VeryLazy" },
     'ThePrimeagen/harpoon',
     'mbbill/undotree',
-    { 'tpope/vim-fugitive' },
+    { 'tpope/vim-fugitive', event = "VeryLazy" },
 
     {
         "VonHeikemen/lsp-zero.nvim",
+        lazy = true,
         branch = "v2.x",
         dependencies = {
             -- LSP Support
@@ -66,21 +64,22 @@ require("lazy").setup({
             { "williamboman/mason-lspconfig.nvim" },
 
             -- Autocompletion
-            { "hrsh7th/nvim-cmp" },
-            { "hrsh7th/cmp-buffer" },
-            { "hrsh7th/cmp-path" },
-            { "saadparwaiz1/cmp_luasnip" },
-            { "hrsh7th/cmp-nvim-lsp" },
-            { "hrsh7th/cmp-nvim-lua" },
+            { "hrsh7th/nvim-cmp", lazy = true },
+            { "hrsh7th/cmp-buffer", lazy = true },
+            { "hrsh7th/cmp-path", lazy = true },
+            { "saadparwaiz1/cmp_luasnip", lazy = true },
+            { "hrsh7th/cmp-nvim-lsp", lazy = true },
+            { "hrsh7th/cmp-nvim-lua", lazy = true },
 
             -- Snippets
-            { "L3MON4D3/LuaSnip" },
-            { "rafamadriz/friendly-snippets" },
+            { "L3MON4D3/LuaSnip", lazy = true },
+            { "rafamadriz/friendly-snippets", lazy = true },
         },
     },
 
     {
         'lewis6991/gitsigns.nvim',
+        lazy = true,
         config = function()
             require('gitsigns').setup()
         end
@@ -93,10 +92,11 @@ require("lazy").setup({
 
     {
         "nvim-neo-tree/neo-tree.nvim",
+        event = "VeryLazy",
         branch = "v3.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            { "nvim-tree/nvim-web-devicons", lazy = true }, -- not strictly required, but recommended
             "MunifTanjim/nui.nvim",
         }
     },
