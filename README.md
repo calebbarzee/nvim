@@ -164,4 +164,4 @@ so there are more than this, but this should get you started.
 * Fugative - https://github.com/tpope/vim-fugitive
 * Lsp-Zero - https://github.com/VonHeikemen/lsp-zero.nvim
 * Git Signs - https://github.com/lewis6991/gitsigns.nvim
-* Feline - https://github.com/Famiu/feline.nvim
+* ~~Feline - https://github.com/Famiu/feline.nvim~~ Express Line - https://github.com/tjdevries/express_line.nvim
