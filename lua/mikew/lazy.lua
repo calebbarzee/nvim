@@ -37,7 +37,7 @@ require("lazy").setup({
     {
         'nvim-telescope/telescope.nvim',
         event = "VeryLazy",
-        tag = '0.1.1',
+        tag = '0.1.4',
         -- or                            , branch = '0.1.x',
         dependencies = { { 'nvim-lua/plenary.nvim' } }
     },
