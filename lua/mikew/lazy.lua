@@ -13,6 +13,15 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
+    -- markdown preview
+    -- install without yarn or npm
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
+
     -- spashscreen
     {
         'goolord/alpha-nvim',
@@ -34,21 +43,21 @@ require("lazy").setup({
     },
 
     -- colors
-    { "catppuccin/nvim",                 lazy = true, name = "catppuccin" },
-    { "ellisonleao/gruvbox.nvim",        lazy = true, name = "gruvbox" },
-    { "savq/melange-nvim",               lazy = true, name = "melange" },
-    { "olivercederborg/poimandres.nvim", lazy = true, name = "poimandres" },
-    { 'rmehri01/onenord.nvim',           lazy = true, name = 'onenord', },
-    { 'AlexvZyl/nordic.nvim',            lazy = true, name = 'nordic', },
-    { 'sainnhe/everforest',              lazy = true, name = 'everforest', },
-    { 'rebelot/kanagawa.nvim',           lazy = true, name = 'kanagawa', },
-    { 'folke/tokyonight.nvim',           lazy = true, name = 'tokyonight', },
-    { "xero/miasma.nvim",                lazy = true, name = 'miasma', },
+    { "catppuccin/nvim",                 lazy = true,        name = "catppuccin" },
+    { "ellisonleao/gruvbox.nvim",        lazy = true,        name = "gruvbox" },
+    { "savq/melange-nvim",               lazy = true,        name = "melange" },
+    { "olivercederborg/poimandres.nvim", lazy = true,        name = "poimandres" },
+    { 'rmehri01/onenord.nvim',           lazy = true,        name = 'onenord', },
+    { 'AlexvZyl/nordic.nvim',            lazy = true,        name = 'nordic', },
+    { 'sainnhe/everforest',              lazy = true,        name = 'everforest', },
+    { 'rebelot/kanagawa.nvim',           lazy = true,        name = 'kanagawa', },
+    { 'folke/tokyonight.nvim',           lazy = true,        name = 'tokyonight', },
+    { "xero/miasma.nvim",                lazy = true,        name = 'miasma', },
 
 
     -- treesitter
-    {'nvim-treesitter/nvim-treesitter', event = "BufEnter", build = ':TSUpdate', },
-    { 'nvim-treesitter/playground', event = "VeryLazy" },
+    { 'nvim-treesitter/nvim-treesitter', event = "BufEnter", build = ':TSUpdate', },
+    { 'nvim-treesitter/playground',      event = "VeryLazy" },
     'ThePrimeagen/harpoon',
     'mbbill/undotree',
     { 'tpope/vim-fugitive', event = "VeryLazy" },
@@ -64,16 +73,16 @@ require("lazy").setup({
             { "williamboman/mason-lspconfig.nvim" },
 
             -- Autocompletion
-            { "hrsh7th/nvim-cmp", lazy = true },
-            { "hrsh7th/cmp-buffer", lazy = true },
-            { "hrsh7th/cmp-path", lazy = true },
-            { "saadparwaiz1/cmp_luasnip", lazy = true },
-            { "hrsh7th/cmp-nvim-lsp", lazy = true },
-            { "hrsh7th/cmp-nvim-lua", lazy = true },
+            { "hrsh7th/nvim-cmp",                 lazy = true },
+            { "hrsh7th/cmp-buffer",               lazy = true },
+            { "hrsh7th/cmp-path",                 lazy = true },
+            { "saadparwaiz1/cmp_luasnip",         lazy = true },
+            { "hrsh7th/cmp-nvim-lsp",             lazy = true },
+            { "hrsh7th/cmp-nvim-lua",             lazy = true },
 
             -- Snippets
-            { "L3MON4D3/LuaSnip", event = "CursorMoved" },
-            { "rafamadriz/friendly-snippets", lazy = true },
+            { "L3MON4D3/LuaSnip",                 event = "CursorMoved" },
+            { "rafamadriz/friendly-snippets",     lazy = true },
         },
     },
 
