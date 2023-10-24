@@ -113,6 +113,9 @@ can type 'g?' to see a help menu with a bunch of commands.
 | ]d | next diagnostic |
 | Space-u | open undotree |
 | C-z | Open a terminal. I have this configured to open fish (you must have fish installed for this to work). If you want to change the terminal, you can update vim.opt.shell at the bottom of the set.lua file in this config. If you're already in the terminal, C-z closes it. |
+| Space-md | Open a live markdown preview in your browser. I'm not sure if there is setup required to make this work for different OS's/browsers etc. |
+| Space-lm | Switch to light mode. Currently an everforest theme, but you can change this.
+| Space-dm | Switch to dark mode. Transparent kanagawa-dragon theme. |
 
 # LSP Setup
 
