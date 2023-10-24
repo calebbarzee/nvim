@@ -53,6 +53,7 @@ require("lazy").setup({
     { 'rebelot/kanagawa.nvim',           lazy = true,        name = 'kanagawa', },
     { 'folke/tokyonight.nvim',           lazy = true,        name = 'tokyonight', },
     { "xero/miasma.nvim",                lazy = true,        name = 'miasma', },
+    { "jnurmine/Zenburn",                lazy = true,        name = 'zenburn', },
 
 
     -- treesitter
