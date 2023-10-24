@@ -6,6 +6,16 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- change to light/dark mode
+vim.keymap.set("n", "<leader>lm", ":set background=light<cr>:colorscheme everforest<cr>")
+vim.keymap.set("n", "<leader>dm", function()
+    -- get the path of this config
+    local path = vim.fn.expand("$MYVIMRC"):gsub("init.lua", "")
+    -- only source the colors and statusbar setup
+    vim.cmd("source " .. path .. "lua/plugin/colors.lua")
+    vim.cmd("source " .. path .. "lua/plugin/statusbar.lua")
+end)
+
 -- *** Mike's remaps ***
 
 -- I've gotten used to this for switching back
