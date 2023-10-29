@@ -14,14 +14,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- markdown preview
-    -- install without yarn or npm
     {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-
+    -- auto insert paretheses/brackets etc.
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {} -- this is equalent to setup({}) function
+    },
     -- spashscreen
     {
         'goolord/alpha-nvim',
