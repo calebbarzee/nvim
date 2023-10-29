@@ -7,7 +7,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- change to light/dark mode
-vim.keymap.set("n", "<leader>lm", ":set background=light<cr>:colorscheme everforest<cr>")
+vim.keymap.set("n", "<leader>lm", ":set background=light<cr>:colorscheme melange<cr>")
 vim.keymap.set("n", "<leader>dm", function()
     -- get the path of this config
     local path = vim.fn.expand("$MYVIMRC"):gsub("init.lua", "")
