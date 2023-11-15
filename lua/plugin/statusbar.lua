@@ -116,7 +116,7 @@ local generator = function()
     -- readonly_flag and percentage_through_file
     table.insert(el_segments, builtin.readonly_flag)
     table.insert(el_segments, builtin.percentage_through_file)
-    table.insert(el_segments, "%%")
+    table.insert(el_segments, "%% ")
 
     return el_segments
 end
