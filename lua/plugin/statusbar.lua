@@ -80,6 +80,7 @@ local generator = function()
             end
         ))
 
+    local builtin = require('el.builtin')
     -- file name and modified flag
     table.insert(el_segments, " %t %m ")
     -- move to end
@@ -111,7 +112,6 @@ local generator = function()
                 end
             end
         ))
-    local builtin = require('el.builtin')
 
     -- readonly_flag and percentage_through_file
     table.insert(el_segments, builtin.readonly_flag)
@@ -122,3 +122,18 @@ local generator = function()
 end
 
 require('el').setup({ generator = generator })
+
+vim.keymap.set("n", "<C-s>", function()
+  ToggleStatusbar()
+end)
+
+local status = 3
+
+function ToggleStatusbar()
+  if status == 3 then
+    status = 0
+  else
+    status = 3
+  end
+  vim.cmd("set laststatus=" .. status .. " ruler")
+end
