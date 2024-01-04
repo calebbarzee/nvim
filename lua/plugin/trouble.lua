@@ -1,13 +1,13 @@
-local trb = require("trouble")
+local trouble = require("trouble")
 
 vim.keymap.set("n", "[d", function()
-  trb.open();
-  trb.next({ skip_groups = true, jump = true });
+  trouble.open();
+  trouble.previous({ skip_groups = true, jump = true });
 end)
 
 vim.keymap.set("n", "]d", function()
-  trb.open();
-  trb.next({ skip_groups = true, jump = true });
+  trouble.open();
+  trouble.next({ skip_groups = true, jump = true });
 end)
 
-vim.keymap.set("n", "<leader>xx", function() trb.toggle() end)
+vim.keymap.set("n", "<leader>xx", function() trouble.toggle() end)
