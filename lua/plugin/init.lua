@@ -10,5 +10,6 @@ require("plugin.statusbar")
 require("plugin.telescope")
 require("plugin.treesitter")
 require("plugin.undotree")
+require("plugin.trouble")
 
 require("Comment").setup()
