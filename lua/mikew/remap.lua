@@ -2,6 +2,10 @@ vim.g.mapleader = " "
 -- go to netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- go to home screen
+vim.keymap.set("n", "<leader>hs", ":Alpha<CR><C-w>o")
+
+
 -- move selected lines around with J/K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
