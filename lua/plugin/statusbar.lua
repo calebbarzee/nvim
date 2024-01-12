@@ -18,11 +18,6 @@ return {
     --     white = '#ebdbb2',
     --     yellow = '#d79921',
     -- }
-
-    vim.cmd("highlight StatusLine guibg=#1F2223")
-    vim.cmd("highlight StatusLine guifg=#6f6666")
-    vim.cmd("highlight ElInsert guifg=#af6666")
-
     require('gitsigns').setup()
 
     local extensions = require('el.extensions')

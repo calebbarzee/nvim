@@ -13,11 +13,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- change to light/dark mode
 vim.keymap.set("n", "<leader>lm", ":set background=light<cr>:colorscheme melange<cr>")
 vim.keymap.set("n", "<leader>dm", function()
-    -- get the path of this config
-    local path = vim.fn.expand("$MYVIMRC"):gsub("init.lua", "")
     -- only source the colors and statusbar setup
-    vim.cmd("source " .. path .. "lua/plugin/colors.lua")
-    vim.cmd("source " .. path .. "lua/plugin/statusbar.lua")
+    vim.cmd("lua ColorMyPencils()")
 end)
 
 -- *** Mike's remaps ***
