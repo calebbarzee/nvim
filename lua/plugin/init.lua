@@ -1,18 +1,3 @@
--- require("plugin.alpha")
--- require("plugin.colors")
--- require("plugin.fugitive")
--- require("plugin.harpoon")
--- require("plugin.lsp")
--- require("plugin.markdown")
--- require("plugin.neotree")
--- require("plugin.snip")
--- require("plugin.statusbar")
--- require("plugin.telescope")
--- require("plugin.treesitter")
--- require("plugin.undotree")
--- require("plugin.trouble")
-
-
 -- miscellaneous plugins that don't need much configuration
 return {
   -- comments

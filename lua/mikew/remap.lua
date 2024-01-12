@@ -25,7 +25,7 @@ end)
 -- I've gotten used to this for switching back
 -- to normal mode, but it's horrendous for certain
 -- loop formats (e.g. for(int jj = 0; ...; ...) {...)
-vim.keymap.set("i", "jj", "<C-c>")
+vim.keymap.set("i", "jk", "<C-c>")
 -- save faster
 vim.keymap.set("n", "<leader>w", ":w")
 -- open neotree
