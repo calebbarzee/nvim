@@ -10,7 +10,6 @@ return {
   config = function()
     local trouble = require("trouble")
 
-<<<<<<< HEAD
     -- vim.keymap.set("n", "[d", function()
     --   trouble.open();
     --   trouble.previous({ skip_groups = true, jump = true });
@@ -29,16 +28,3 @@ return {
     vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
   end
 }
-=======
-vim.keymap.set("n", "[d", function()
-  trouble.open();
-  trouble.previous({ skip_groups = true, jump = true });
-end)
-
-vim.keymap.set("n", "]d", function()
-  trouble.open();
-  trouble.next({ skip_groups = true, jump = true });
-end)
-
-vim.keymap.set("n", "<leader>xx", function() trouble.toggle() end)
->>>>>>> parent of 4d7ac30 (Reverted back to only toggling diagnostics with [d keys. Trouble only)
