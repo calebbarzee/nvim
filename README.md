@@ -72,7 +72,7 @@ To search through commands with telescope type:
 | command | action |
 |---------|--------|
 | gd | Go to definition (while in normal mode) |
-| C-k | pull up entry for function or object in floating window |
+| Shift-k | pull up entry for function or object in floating window |
 | C-h | (in insert mode) while typing in paramaters to a function, this will pull up the definition for the function with paramaters |
 | Space-s | Edit every instance of current word in the document |
 | Space-vrn | rename variable |
@@ -106,7 +106,7 @@ can type 'g?' to see a help menu with a bunch of commands.
 ## Misc Commands
 | command | action |
 |---------|--------|
-| jj | (in insert mode) return to normal mode |
+| jk | (in insert mode) return to normal mode |
 | Space-w | quicker save (e.g. you can type Space-w-q-Enter to save and quit)
 | Space-sp | turn on spell check |
 | [d | previous diagnostic |
