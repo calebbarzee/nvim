@@ -1,15 +1,17 @@
 -- colors
 return {
-  { "catppuccin/nvim",                 lazy = true, name = "catppuccin" },
-  { "ellisonleao/gruvbox.nvim",        lazy = true, name = "gruvbox" },
-  { "savq/melange-nvim",               lazy = true, name = "melange" },
-  { "olivercederborg/poimandres.nvim", lazy = true, name = "poimandres" },
-  { 'rmehri01/onenord.nvim',           lazy = true, name = 'onenord', },
-  { 'AlexvZyl/nordic.nvim',            lazy = true, name = 'nordic', },
-  { 'sainnhe/everforest',              lazy = true, name = 'everforest', },
-  { 'folke/tokyonight.nvim',           lazy = true, name = 'tokyonight', },
-  { "xero/miasma.nvim",                lazy = true, name = 'miasma', },
-  { "jnurmine/Zenburn",                lazy = true, name = 'zenburn', },
+  { "catppuccin/nvim",                     lazy = true, name = "catppuccin" },
+  { "ellisonleao/gruvbox.nvim",            lazy = true, name = "gruvbox" },
+  { "savq/melange-nvim",                   lazy = true, name = "melange" },
+  { "olivercederborg/poimandres.nvim",     lazy = true, name = "poimandres" },
+  { 'rmehri01/onenord.nvim',               lazy = true, name = 'onenord', },
+  { 'AlexvZyl/nordic.nvim',                lazy = true, name = 'nordic', },
+  { 'sainnhe/everforest',                  lazy = true, name = 'everforest', },
+  { 'folke/tokyonight.nvim',               lazy = true, name = 'tokyonight', },
+  { "xero/miasma.nvim",                    lazy = true, name = 'miasma', },
+  { "jnurmine/Zenburn",                    lazy = true, name = 'zenburn', },
+  { 'fenetikm/falcon',                     lazy = false, name = 'falcon', },
+  { 'karoliskoncevicius/sacredforest-vim', lazy = true, name = 'sacredforest', },
   {
     'rebelot/kanagawa.nvim',
     priority = 1000,
@@ -67,8 +69,17 @@ return {
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
         -- make all of the side line stuff transparent
-        vim.cmd("highlight LineNr guibg=None")
-        vim.cmd("highlight SignColumn guibg=None")
+        -- vim.cmd("highlight LineNr guibg=None")
+        -- vim.cmd("highlight SignColumn guibg=None")
+        vim.cmd("hi Normal guibg=none ctermbg=none")
+        vim.cmd("hi LineNr guibg=none ctermbg=none")
+        vim.cmd("hi Folded guibg=none ctermbg=none")
+        vim.cmd("hi NonText guibg=none ctermbg=none")
+        vim.cmd("hi SpecialKey guibg=none ctermbg=none")
+        vim.cmd("hi VertSplit guibg=none ctermbg=none")
+        vim.cmd("hi SignColumn guibg=none ctermbg=none")
+        vim.cmd("hi EndOfBuffer guibg=none ctermbg=none")
+
         -- vim.cmd("highlight CursorLineNr guibg=None")
         vim.cmd("highlight GitSignsAdd guibg=None")
         vim.cmd("highlight GitSignsChange guibg=None")
