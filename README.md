@@ -26,11 +26,11 @@ display properly. You can use nerd fonts here: [Nerd Fonts](https://www.nerdfont
 
 ## Windows
 
-    git clone https://github.com/MikeWelsh801/nvim.git $env:USERPROFILE\AppData\Local;  nvim
+    git clone https://github.com/MikeWelsh801/nvim.git $env:USERPROFILE\AppData\Local\nvim;  nvim
 
 ## Windows (Msys2 or Git Bash)
 
-    git clone https://github.com/MikeWelsh801/nvim.git ~/AppData/Local && nvim
+    git clone https://github.com/MikeWelsh801/nvim.git ~/AppData/Local/nvim && nvim
 
 The next time you open nvim, lazy should install all the plugins for you.
 
