@@ -22,18 +22,15 @@ display properly. You can use nerd fonts here: [Nerd Fonts](https://www.nerdfont
 
 ## Mac/Linux
 
-    cd ~/.config
-    git clone https://github.com/MikeWelsh801/nvim.git
+    git clone https://github.com/MikeWelsh801/nvim.git ~/.config/nvim && nvim
 
 ## Windows
 
-    cd $env:USERPROFILE\AppData\Local
-    git clone https://github.com/MikeWelsh801/nvim.git
+    git clone https://github.com/MikeWelsh801/nvim.git $env:USERPROFILE\AppData\Local;  nvim
 
 ## Windows (Msys2 or Git Bash)
 
-    cd ~/AppData/Local
-    git clone https://github.com/MikeWelsh801/nvim.git
+    git clone https://github.com/MikeWelsh801/nvim.git ~/AppData/Local && nvim
 
 The next time you open nvim, lazy should install all the plugins for you.
 
