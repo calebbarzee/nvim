@@ -10,8 +10,9 @@ return {
   { 'folke/tokyonight.nvim',               lazy = true, name = 'tokyonight', },
   { "xero/miasma.nvim",                    lazy = true, name = 'miasma', },
   { "jnurmine/Zenburn",                    lazy = true, name = 'zenburn', },
-  { 'fenetikm/falcon',                     lazy = false, name = 'falcon', },
+  { 'fenetikm/falcon',                     lazy = true, name = 'falcon', },
   { 'karoliskoncevicius/sacredforest-vim', lazy = true, name = 'sacredforest', },
+  { 'doums/darcula',                       lazy = true, name = 'darcula', },
   {
     'rebelot/kanagawa.nvim',
     priority = 1000,
