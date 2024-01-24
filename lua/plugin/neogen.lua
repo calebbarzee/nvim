@@ -1,6 +1,7 @@
 return {
   "danymat/neogen",
   dependencies = "nvim-treesitter/nvim-treesitter",
+  event = "CursorMoved",
   config = function()
     require('neogen').setup({ snippet_engine = "luasnip" })
 

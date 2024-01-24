@@ -1,6 +1,7 @@
 return {
   "folke/trouble.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  event = "VeryLazy",
   opts = {
     height = 5,
     -- your configuration comes here

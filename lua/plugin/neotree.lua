@@ -3,7 +3,7 @@ return {
   -- Unless you are still migrating, remove the deprecated commands from v1.x
 
   "nvim-neo-tree/neo-tree.nvim",
-  event = "VeryLazy",
+  cmd = {"Neotree"},
   branch = "v3.x",
   dependencies = {
     "nvim-lua/plenary.nvim",

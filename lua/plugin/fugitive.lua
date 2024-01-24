@@ -1,7 +1,7 @@
 return {
   {
     'tpope/vim-fugitive',
-    event = "VeryLazy",
+    event = "InsertEnter",
     config = function()
       -- fugitive
       vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
