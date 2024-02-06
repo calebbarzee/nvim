@@ -15,6 +15,8 @@ return {
     { "saadparwaiz1/cmp_luasnip",         lazy = true },
     { "hrsh7th/cmp-nvim-lsp",             lazy = true },
     { "hrsh7th/cmp-nvim-lua",             lazy = true },
+    -- command line completes
+    { "hrsh7th/cmp-cmdline",              lazy = true },
 
     -- Snippets
     { "L3MON4D3/LuaSnip",                 event = "CursorMoved" },
@@ -50,6 +52,28 @@ return {
     lsp.nvim_workspace()
 
     local cmp = require('cmp')
+
+    -- `/` cmdline setup.
+    cmp.setup.cmdline('/', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' }
+      }
+    })
+
+    -- `:` cmdline setup.
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+          { name = 'path' }
+        },
+        {
+          name = 'cmdline',
+          option = {
+            ignore_cmds = { 'Man', '!' }
+          }
+        })
+    })
 
     -- *** cmp mappings caused caused a whole heap of trouble ***
     -- I think I got it dialled now, but I'm keeping all this commented out
