@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- go to home screen
-vim.keymap.set("n", "<leader>hs", ":Alpha<CR><C-w>o")
+vim.keymap.set("n", "<leader>hs", ":Alpha<CR><C-w>o", { silent = true })
 
 
 -- move selected lines around with J/K
@@ -11,10 +11,10 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- change to light/dark mode
-vim.keymap.set("n", "<leader>lm", ":set background=light<cr>:colorscheme melange<cr>")
+vim.keymap.set("n", "<leader>lm", ":set background=light<cr>:colorscheme melange<cr>", { silent = true })
 vim.keymap.set("n", "<leader>dm", function()
-    -- only source the colors and statusbar setup
-    vim.cmd("lua ColorMyPencils()")
+  -- only source the colors and statusbar setup
+  vim.cmd("lua ColorMyPencils()")
 end)
 
 -- *** Mike's remaps ***
@@ -24,9 +24,9 @@ end)
 -- loop formats (e.g. for(int jj = 0; ...; ...) {...)
 vim.keymap.set("i", "jk", "<C-c>")
 -- save faster
-vim.keymap.set("n", "<leader>w", ":w")
+vim.keymap.set("n", "<leader>w", ":w", { silent = true })
 -- open neotree
-vim.keymap.set("n", "tt", ":Neotree<CR>")
+vim.keymap.set("n", "tt", ":Neotree reveal<CR>", { silent = true })
 -- turn on spell check
 vim.keymap.set("n", "<leader>sp", ":setlocal spell spelllang=en_us<CR>")
 
@@ -73,47 +73,47 @@ vim.keymap.set("n", "<leader>D", "\"+D")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 -- reformat buffer
 vim.keymap.set("n", "<leader>f", function()
-    vim.lsp.buf.format()
+  vim.lsp.buf.format()
 end)
 
 -- change every occurance of word in buffer
 vim.keymap.set("n", "<leader>s",
-    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- remaps for opening a terminal in vim
-vim.keymap.set("n", "<C-z>", "<C-w>s<C-w>j:terminal<CR><C-w>5-jjA")
+vim.keymap.set("n", "<C-z>", "<C-w>s<C-w>j:terminal<CR><C-w>5-jjA", { silent = true })
 vim.keymap.set("t", "<C-z>", "<C-\\><C-n><C-w>c")
 vim.keymap.set("t", "jj", "<C-\\><C-n>")
 
 -- toggle <space><space>w remap arrow keys to resize windows
-vim.keymap.set("n", "<leader><leader>w", ":lua ToggleResizeMode()<CR>")
+vim.keymap.set("n", "<leader><leader>w", ":lua ToggleResizeMode()<CR>", { silent = true })
 KeyResizeEnabled = false
 
 -- toggle window resize mode functions
 function ToggleResizeMode()
-    if KeyResizeEnabled then
-        NormalArrowKeys()
-        KeyResizeEnabled = false
-    else
-        ResizeArrowKeys()
-        KeyResizeEnabled = true
-    end
+  if KeyResizeEnabled then
+    NormalArrowKeys()
+    KeyResizeEnabled = false
+  else
+    ResizeArrowKeys()
+    KeyResizeEnabled = true
+  end
 end
 
 -- works as expected, moves cursor
 function NormalArrowKeys()
-    print("Arrrow keys in normal mode.")
-    vim.keymap.set("n", "<Up>", "<Up>")
-    vim.keymap.set("n", "<Down>", "<Down>")
-    vim.keymap.set("n", "<Left>", "<Left>")
-    vim.keymap.set("n", "<Right>", "<Right>")
+  print("Arrrow keys in normal mode.")
+  vim.keymap.set("n", "<Up>", "<Up>")
+  vim.keymap.set("n", "<Down>", "<Down>")
+  vim.keymap.set("n", "<Left>", "<Left>")
+  vim.keymap.set("n", "<Right>", "<Right>")
 end
 
 -- resize windows (note: right/up is bigger, left/down is smaller)
 function ResizeArrowKeys()
-    print("Arrrow keys in resize mode.")
-    vim.keymap.set("n", "<Up>", "<C-w>+")
-    vim.keymap.set("n", "<Down>", "<C-w>-")
-    vim.keymap.set("n", "<Left>", "<C-w><")
-    vim.keymap.set("n", "<Right>", "<C-w>>")
+  print("Arrrow keys in resize mode.")
+  vim.keymap.set("n", "<Up>", "<C-w>+")
+  vim.keymap.set("n", "<Down>", "<C-w>-")
+  vim.keymap.set("n", "<Left>", "<C-w><")
+  vim.keymap.set("n", "<Right>", "<C-w>>")
 end

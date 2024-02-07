@@ -15,6 +15,13 @@ return {
   },
   config = function()
     require("noice").setup({
+      views = {
+        mini = {
+          win_options = {
+            winblend = 5,
+          }
+        }
+      },
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
