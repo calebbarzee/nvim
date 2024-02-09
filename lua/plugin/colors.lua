@@ -14,7 +14,7 @@ return {
   { 'karoliskoncevicius/sacredforest-vim', lazy = true, name = 'sacredforest', },
   { 'doums/darcula',                       lazy = true, name = 'darcula', },
   {
-    'rebelot/kanagawa.nvim',
+    'MikeWelsh801/kanagawa.nvim',
     priority = 1000,
     name = 'kanagawa',
     config = function()
