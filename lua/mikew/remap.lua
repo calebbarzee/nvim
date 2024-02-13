@@ -82,8 +82,8 @@ vim.keymap.set("n", "<leader>s",
 
 -- remaps for opening a terminal in vim
 vim.keymap.set("n", "<C-z>", "<C-w>s<C-w>j:terminal<CR><C-w>5-jjA", { silent = true })
-vim.keymap.set("t", "<C-z>", "<C-\\><C-n><C-w>c")
-vim.keymap.set("t", "jj", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-z>", "<C-d><C-\\><C-n><C-w>c")
+vim.keymap.set("t", "jk", "<C-\\><C-n>")
 
 -- toggle <space><space>w remap arrow keys to resize windows
 vim.keymap.set("n", "<leader><leader>w", ":lua ToggleResizeMode()<CR>", { silent = true })
