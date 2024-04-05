@@ -1,8 +1,15 @@
 -- miscellaneous plugins that don't need much configuration
 return {
   -- Highlight todo, notes, etc in comments
+  {
+    'norcalli/nvim-colorizer.lua',
+    event = 'InsertEnter',
+    config = function()
+      require('colorizer').setup()
+    end
+  },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = true } },
-  'tpope/vim-sleuth',   -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   -- comments
   {
     'numToStr/Comment.nvim',
