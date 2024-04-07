@@ -14,7 +14,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>lm", ":set background=light<cr>:colorscheme melange<cr>", { silent = true })
 vim.keymap.set("n", "<leader>dm", function()
   -- only source the colors and statusbar setup
-  vim.cmd("lua ColorMyPencils()")
+  require('eye-cancer').setup()
 end)
 
 -- *** Mike's remaps ***
