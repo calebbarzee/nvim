@@ -146,5 +146,23 @@ return {
     vim.diagnostic.config({
       virtual_text = true
     })
+
+    -- fixes gopls lsp error from stupid async crap to get the mod path that the
+    -- lsp open source people refuse to fix
+    local util = require('lspconfig/util')
+
+    require('lspconfig').gopls.setup({
+      root_dir = function(fname)
+        -- see: https://github.com/neovim/nvim-lspconfig/issues/804
+        local mod_cache = vim.trim(vim.fn.system 'go env GOMODCACHE')
+        if fname:sub(1, #mod_cache) == mod_cache then
+          local clients = vim.lsp.get_active_clients { name = 'gopls' }
+          if #clients > 0 then
+            return clients[#clients].config.root_dir
+          end
+        end
+        return util.root_pattern 'go.work' (fname) or util.root_pattern('go.mod', '.git')(fname)
+      end,
+    })
   end
 }

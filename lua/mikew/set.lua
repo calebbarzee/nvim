@@ -43,7 +43,7 @@ vim.opt.laststatus = 3
 
 -- creates little dots before where you type
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "⎢ ", trail = '·', nbsp = '␣' }
 
 -- sets highlighting when you yank something
 vim.api.nvim_create_autocmd('TextYankPost', {
