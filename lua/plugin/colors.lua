@@ -18,9 +18,9 @@ return {
   {
     "MikeWelsh801/eye-cancer.nvim",
     priority = 1000,
-    dependencies = { 'rebelot/kanagawa.nvim', name = 'kanagawa' },
-    config = function ()
-      require('eye-cancer').setup()
+    dependencies = { 'rebelot/kanagawa.nvim' },
+    config = function()
+      vim.cmd('colorscheme eye-cancer')
     end
   },
 }

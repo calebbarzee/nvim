@@ -1,15 +1,23 @@
 -- miscellaneous plugins that don't need much configuration
 return {
-  -- Highlight todo, notes, etc in comments
   {
     'norcalli/nvim-colorizer.lua',
     event = 'InsertEnter',
     config = function()
-      require('colorizer').setup()
+      require('colorizer').setup({ "*" }, { rgb_fn = true, hsl_fn = true })
     end
   },
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = true } },
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- Highlight todo, notes, etc in comments
+  {
+    'folke/todo-comments.nvim',
+    event = 'VimEnter',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    opts = { signs = true }
+  },
+
+  -- I don't really like this one, so I'm removing it for now.
+  -- {'tpope/vim-sleuth'}, -- Detect tabstop and shiftwidth automatically
+
   -- comments
   {
     'numToStr/Comment.nvim',
@@ -18,12 +26,16 @@ return {
       require("Comment").setup()
     end
   },
+
   -- auto insert paretheses/brackets etc.
-  {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    opts = {} -- this is equalent to setup({}) function
-  },
+  -- again, I'm not sure I like this one, so I'm removing it.
+  -- {
+  --   'windwp/nvim-autopairs',
+  --   event = "InsertEnter",
+  --   opts = {} -- this is equalent to setup({}) function
+  -- },
+
+  -- adds coloring/icons for git info
   {
     'lewis6991/gitsigns.nvim',
     lazy = true,
