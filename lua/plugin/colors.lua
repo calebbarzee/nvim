@@ -16,7 +16,7 @@ return {
 
   -- custom color scheme that builds on kanagawa
   {
-    "MikeWelsh801/eye-cancer.nvim",
+    "MikeWelsh801/eye-cancer",
     priority = 1000,
     dependencies = { 'rebelot/kanagawa.nvim' },
     config = function()
