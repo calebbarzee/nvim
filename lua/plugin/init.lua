@@ -1,6 +1,13 @@
 -- miscellaneous plugins that don't need much configuration
 return {
   {
+      "MikeWelsh801/scratch.nvim",
+      lazy = true,
+      config = function ()
+          vim.keymap.set('n', '<leader>tp', require("scratch").create_poop_float, {silent = true})
+      end
+  },
+  {
     'norcalli/nvim-colorizer.lua',
     event = 'InsertEnter',
     config = function()
@@ -42,5 +49,17 @@ return {
     config = function()
       require('gitsigns').setup()
     end
+  },
+  {
+    'rmagatti/auto-session',
+    lazy = false,
+
+    ---enables autocomplete for opts
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {
+      suppressed_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+      -- log_level = 'debug',
+    }
   },
 }

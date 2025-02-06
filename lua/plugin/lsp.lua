@@ -1,7 +1,8 @@
 return {
   "VonHeikemen/lsp-zero.nvim",
   branch = "v2.x",
-  event = "CursorMoved",
+  lazy = false,
+  -- event = "CursorMoved",
   dependencies = {
     -- LSP Support
     { "neovim/nvim-lspconfig" },
@@ -23,29 +24,14 @@ return {
     { "rafamadriz/friendly-snippets",     lazy = true },
   },
   config = function()
-    -- snippets (this needs to run before the other code)
-    local ls = require('luasnip')
-    local s = ls.snippet
-    local fmt = require('luasnip.extras.fmt').fmt
-    local i = ls.insert_node
-    local rep = require('luasnip.extras').rep
-
-    vim.keymap.set({ "i", "s" }, "<C-k>", function() ls.jump(1) end, { silent = true })
-    vim.keymap.set({ "i", "s" }, "<C-j>", function() ls.jump(-1) end, { silent = true })
-
-
-    ls.add_snippets("all", {
-      s("tgc", fmt("<{}>{}</{}>", { i(1, "Text"), i(2), rep(1) })),
-      s("tgo", fmt("<{}/>", { i(1, "Text") })),
-    })
-
-    require("luasnip.loaders.from_vscode").lazy_load()
+    require("config.snippets")
 
     -- lsp
     local lsp = require("lsp-zero").preset({})
 
     lsp.ensure_installed({
-      'rust_analyzer',
+      'clangd',
+      'lua_ls',
     })
 
     -- Fix Undefined global 'vim'
@@ -101,6 +87,7 @@ return {
       },
       mapping = {
         ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-f>"] = cmp.mapping.confirm({ select = true }),
         ["<C-Space>"] = cmp.mapping.complete(),
         -- ["<C-n>"] = cmp_action.luasnip_jump_forward(),
         -- ["<C-p>"] = cmp_action.luasnip_jump_backward(),

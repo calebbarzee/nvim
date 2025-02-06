@@ -6,9 +6,9 @@ opt.relativenumber = true
 -- I'm not sold on this, but I'll try it out.
 opt.cursorline = true
 
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 
 opt.smartindent = true
@@ -47,8 +47,11 @@ opt.shellxquote = ''
 opt.laststatus = 3
 
 -- creates little dots before where you type
-opt.list = true
-opt.listchars = { tab = "⎢ ", trail = '·', nbsp = '␣' }
+opt.list = false
+-- don't add eol that conflicts with vscode users
+opt.fixeol = false
+
+opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- sets highlighting when you yank something
 vim.api.nvim_create_autocmd('TextYankPost', {
