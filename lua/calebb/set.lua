@@ -1,10 +1,5 @@
 local opt = vim.opt
-
--- relative line numbers
-opt.nu = true
-opt.relativenumber = true
--- I'm not sold on this, but I'll try it out.
-opt.cursorline = true
+vim.opt.clipboard = "unnamedplus"
 
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -39,16 +34,13 @@ opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.cmd("set nofoldenable")
 
 -- ***CHANGE TERMINAL THAT OPENS WITH <C-z>***
-opt.shell = "bash"
+opt.shell = "zsh"
 opt.shellcmdflag = '-c'
 opt.shellxquote = ''
 
 -- don't split up the status line
 opt.laststatus = 3
-
--- creates little dots before where you type
 opt.list = false
--- don't add eol that conflicts with vscode users
 opt.fixeol = false
 
 opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

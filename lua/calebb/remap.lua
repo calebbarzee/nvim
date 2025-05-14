@@ -1,8 +1,7 @@
 vim.g.mapleader = " "
--- go to netrw
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>fv", ":Neotree reveal<CR>", { silent = true })
 
--- go to home screen
+-- TODO: remove home screen and boot into file viewer if no file arg is given
 vim.keymap.set("n", "<leader>hs", ":Alpha<CR><C-w>o", { silent = true })
 
 -- change macro execution to leader a in visual mode
@@ -12,6 +11,7 @@ vim.keymap.set("v", "<leader>a", ":norm! @a<CR>", { silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- TODO: set light and dark mode from system mode, with manual swap keybinds
 -- change to light/dark mode
 vim.keymap.set("n", "<leader>lm", ":set background=light<cr>:colorscheme melange<cr>", { silent = true })
 vim.keymap.set("n", "<leader>dm", function()
@@ -19,20 +19,9 @@ vim.keymap.set("n", "<leader>dm", function()
   vim.cmd("colorscheme eye-cancer")
 end, { silent = true })
 
--- *** Mike's remaps ***
-
--- I've gotten used to this for switching back
--- to normal mode, but it's horrendous for certain
--- loop formats (e.g. for(int jj = 0; ...; ...) {...)
-vim.keymap.set("i", "jk", "<C-c>")
--- save faster
-vim.keymap.set("n", "<leader>w", ":w", { silent = true })
--- open neotree
-vim.keymap.set("n", "tt", ":Neotree reveal<CR>", { silent = true })
 -- turn on spell check
 vim.keymap.set("n", "<leader>sp", ":setlocal spell spelllang=en_us<CR>")
 
--- the ultimate blame game
 vim.keymap.set("n", "<leader>gb", ":Git blame<CR><C-w>26<")
 
 -- doom emacs window management
@@ -52,11 +41,7 @@ vim.keymap.set("n", "<leader>wH", "<C-w>H")
 vim.keymap.set("n", "<leader>wJ", "<C-w>J")
 vim.keymap.set("n", "<leader>wK", "<C-w>K")
 vim.keymap.set("n", "<leader>wL", "<C-w>L")
---resize windows // kind of stupid, but works replaced with resize mode
-vim.keymap.set("n", "<M-,>", "<C-w>5<")
-vim.keymap.set("n", "<M-.>", "<C-w>5>")
-vim.keymap.set("n", "<M-k>", "<C-w>5+")
-vim.keymap.set("n", "<M-j>", "<C-w>5-")
+-- TODO: add resize windows keymap 
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -74,7 +59,7 @@ vim.keymap.set("n", "<leader>D", "\"+D")
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 -- reformat buffer
-vim.keymap.set("n", "<leader>f", function()
+vim.keymap.set("n", "<leader>ff", function()
   -- local pretty_types = {
   --   "typescriptreact",
   --   "typescript",
